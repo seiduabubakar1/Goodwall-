@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Investor Dashboard - Real Estate Investment Platform</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>🏢 Real Estate Investment Platform</h1>
+                <div class="user-info">
+                    <span id="userEmail"></span>
+                    <button id="logoutBtn" class="btn btn-danger">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Investment Levels -->
+            <section class="investment-levels">
+                <h2>Investment Levels</h2>
+                <div class="levels-grid" id="levelsGrid">
+                    <!-- Levels will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Add Investment Section -->
+            <section class="add-investment">
+                <h2>Add Investment</h2>
+                <form id="investmentForm">
+                    <div class="form-group">
+                        <label>Select Investment Level:</label>
+                        <select id="levelSelect" required>
+                            <option value="">Choose a level...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method:</label>
+                        <select id="paymentMethod" required>
+                            <option value="">Select method...</option>
+                            <option value="mobile-money">Mobile Money</option>
+                            <option value="crypto">Cryptocurrency</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Transaction ID:</label>
+                        <input type="text" id="transactionId" placeholder="Enter your transaction ID" required>
+                    </div>
+                    <div id="paymentDetails" class="payment-details">
+                        <!-- Payment details will be displayed here -->
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Investment</button>
+                </form>
+            </section>
+
+            <!-- User Investments -->
+            <section class="user-investments">
+                <h2>My Investments</h2>
+                <table class="investments-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Amount</th>
+                            <th>Interest Rate</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="investmentsBody">
+                        <!-- Investments will be loaded here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="investor.js"></script>
+</body>
+</html>

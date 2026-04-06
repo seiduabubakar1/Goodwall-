@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .tab-content h2 {
+            margin-top: 20px;
+        }
+        .tab-pane {
+            padding: 15px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Admin Dashboard</h1>
+        <ul class="nav nav-tabs" id="dashboardTabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#pendingTransactions">Pending Transactions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#investmentLevels">Manage Investment Levels</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#investorAccounts">View Investor Accounts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#paymentMethods">Manage Payment Methods</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#investmentStatistics">Investment Statistics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#logout" onclick="logout()">Logout</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="pendingTransactions">
+                <h2>Pending Transactions Approval</h2>
+                <p>List of transactions awaiting approval.</p>
+            </div>
+            <div class="tab-pane fade" id="investmentLevels">
+                <h2>Manage Investment Levels (RE1-RE10)</h2>
+                <p>Manage investment levels for investors.</p>
+            </div>
+            <div class="tab-pane fade" id="investorAccounts">
+                <h2>View All Investor Accounts</h2>
+                <p>Overview of all investor accounts.</p>
+            </div>
+            <div class="tab-pane fade" id="paymentMethods">
+                <h2>Manage Payment Methods</h2>
+                <p>Manage mobile money and crypto addresses.</p>
+            </div>
+            <div class="tab-pane fade" id="investmentStatistics">
+                <h2>Investment Statistics</h2>
+                <p>View detailed investment statistics.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function logout() {
+            alert('Logged out successfully.');
+            // You can add logout logic here.
+        }
+    </script>
+</body>
+</html>
